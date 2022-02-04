@@ -1,5 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - ComportamientoBloque
+    - GameManager
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -39,9 +42,23 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 23376}
+    - Class: 114
+      Script: {instanceID: 27592}
+    - Class: 115
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -562,6 +579,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9531c9f4e701f1e20848747227ea5272
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ComportamientoBloque
+  - hash:
+      serializedVersion: 2
+      Hash: 3e6a8d6211530f775b8dcb21ce5b7298
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ComportamientoBola
+  - hash:
+      serializedVersion: 2
+      Hash: e12c3888bc78f60bbc553195d20e7530
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/Juego.unity
