@@ -10,10 +10,16 @@ public class ComportamientoBloque : MonoBehaviour
     // Velocidad del bloque
     public float velocidadBloque = 5;
 
+    //SpriteRenderer del bloque
+    SpriteRenderer spriterBloque;
+
     void Start()
     {
         //Se obtiene el RigidBody asociado al objeto
         rbBloque = GetComponent<Rigidbody2D>();
+
+        //Se obtenemos el SpriteRenderer del bloque
+        spriterBloque = GetComponent<SpriteRenderer>();
 
 
     }
@@ -30,7 +36,15 @@ public class ComportamientoBloque : MonoBehaviour
 
     public void movimientoBloque(float moveX, float moveY)
     {
-
         rbBloque.velocity = new Vector2(moveX, moveY);
+/*
+         if (moveX > 0)
+        {
+            spriterBloque.flipY = false;//
+        }
+        else if (moveX < 0)
+        {
+            spriterBloque.flipY = true;
+        }*/
     }
 }

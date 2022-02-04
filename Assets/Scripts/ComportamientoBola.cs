@@ -7,12 +7,19 @@ public class ComportamientoBola : MonoBehaviour
     //RigidBody2D de la bola
     Rigidbody2D rbBola;
 
+    //SpriteRenderer del bloque
+    SpriteRenderer spriterBola;
+
+
     // Velocidad de la bola
     public float velocidadBola = 5;
     void Start()
     {
         //Se obtiene el RigidBody asociado al objeto
         rbBola = GetComponent<Rigidbody2D>();
+
+        //Se obtenemos el SpriteRenderer del bloque
+        spriterBola = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -21,15 +28,15 @@ public class ComportamientoBola : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "moneda_20")
+        if (other.gameObject.name == "limite")
         {
-            Debug.Log("Tocado: moneda_20");
+            Debug.Log("Tocado: LIMITE");
         }
-        else
+        else if(other.gameObject.name == "moneda_20_trigger")
         {
-            Debug.Log("Tocado: otro");
+            GameManager.instance.aumentarPuntuacion(20);
         }
     }
 }
