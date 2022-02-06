@@ -24,7 +24,6 @@ public class ComportamientoBloque : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         //Llamada al método que mueve el bloque
