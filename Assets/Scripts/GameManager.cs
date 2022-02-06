@@ -6,8 +6,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    //Moneda_10
+    public GameObject moneda_10_1_trigger;
+    public GameObject moneda_10_2_trigger;
+
     //Moneda_20
     public GameObject moneda_20_trigger;
+
+    //Moneda_30
+    public GameObject moneda_30_1_trigger;
+    public GameObject moneda_30_2_trigger;
+    public GameObject moneda_30_3_trigger;
 
     //Limite
     public GameObject limite;

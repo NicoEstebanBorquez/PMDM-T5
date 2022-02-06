@@ -34,9 +34,17 @@ public class ComportamientoBola : MonoBehaviour
         {
             Debug.Log("Tocado: LIMITE");
         }
-        else if(other.gameObject.name == "moneda_20_trigger")
+        else if (other.gameObject.name == "moneda_10_1_trigger" || other.gameObject.name == "moneda_10_2_trigger")
+        {
+            GameManager.instance.aumentarPuntuacion(10);
+        }
+        else if (other.gameObject.name == "moneda_20_trigger")
         {
             GameManager.instance.aumentarPuntuacion(20);
+        }
+        else if (other.gameObject.name == "moneda_30_1_trigger" || other.gameObject.name == "moneda_30_2_trigger" || other.gameObject.name == "moneda_30_3_trigger")
+        {
+            GameManager.instance.aumentarPuntuacion(30);
         }
     }
 }
