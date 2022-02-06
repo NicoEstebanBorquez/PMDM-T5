@@ -37,14 +37,5 @@ public class ComportamientoBloque : MonoBehaviour
     public void movimientoBloque(float moveX, float moveY)
     {
         rbBloque.velocity = new Vector2(moveX, moveY);
-/*
-         if (moveX > 0)
-        {
-            spriterBloque.flipY = false;//
-        }
-        else if (moveX < 0)
-        {
-            spriterBloque.flipY = true;
-        }*/
     }
 }
