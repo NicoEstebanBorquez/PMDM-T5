@@ -35,6 +35,8 @@ public class ComportamientoBola : MonoBehaviour
             Debug.Log("Tocado: LIMITE");
             //Sonido Game Over
             SoundManager.instance.PlaySound();
+            GameManager.instance.GameOver();
+            GameManager.instance.txtVictoriaDerrota.text = "Has perdido!";
         }
         else if (other.gameObject.name == "moneda_10_1_trigger" || 
         other.gameObject.name == "moneda_10_2_trigger")
