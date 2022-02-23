@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    //Text de Puntuacion
+    //Text de Puntuacion y Puntuacion Record
     public Text txtPuntuacion;
-    //public Text txtPuntuacionMax;
+    public Text txtPuntuacionRecord;
 
     //Text Victoria/Derrota
     public Text txtVictoriaDerrota;
@@ -56,7 +56,9 @@ public class GameManager : MonoBehaviour
 
         //Se carga la puntuación almacenada en PlayerPrefs;
         puntuacionRecord = PlayerPrefs.GetInt("Puntuacion_Maxima");
-        Debug.Log("Record a batir: " + puntuacionRecord);
+
+        //Se muestra el Record en la interfaz
+        //txtPuntuacionRecord.text = "124";//puntuacionRecord.ToString();
 
         txtVictoriaDerrota.enabled = false;
         BotonMenuPrincipal.SetActive(false);
@@ -65,11 +67,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+ //Se muestra el Record en la interfaz
+        txtPuntuacionRecord.text = puntuacionRecord.ToString();
     }
 
     public void func_aumentarPuntuacion(int puntos)
     {
+       
         //Contador de la puntuación actual
         puntuacion = puntuacion + puntos;
         txtPuntuacion.text = puntuacion.ToString();
@@ -82,6 +86,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+
+
+
+
+
     //Metodo que se llamará cuando cuando la bola caiga por el agujero
     public void func_bolaCaePorAgujero()
     {
@@ -90,6 +99,7 @@ public class GameManager : MonoBehaviour
         if (puntuacion > puntuacionRecord)
         {
             //Se guarda el nuevo Record
+            puntuacionRecord = puntuacion;
             PlayerPrefs.SetInt("Puntuacion_Maxima", puntuacionRecord);
             PlayerPrefs.Save();
 
@@ -98,10 +108,9 @@ public class GameManager : MonoBehaviour
             txtVictoriaDerrota.enabled = true;
             BotonMenuPrincipal.SetActive(true);
         }
-
-        //Si no se ha batido el Record, se produce una DERROTA:
-        if (puntuacion <= puntuacionRecord)
+        else
         {
+            //Si no se ha batido el Record, se produce una DERROTA:
             txtVictoriaDerrota.text = "GAME OVER " + puntuacion + " No has conseguido batir el Record actual.";
             txtVictoriaDerrota.enabled = true;
             BotonMenuPrincipal.SetActive(true);

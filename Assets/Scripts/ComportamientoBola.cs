@@ -32,7 +32,6 @@ public class ComportamientoBola : MonoBehaviour
     {
         if (other.gameObject.name == "limite")
         {
-            //Debug.Log("Tocado: LIMITE");
             //Sonido Game Over
             SoundManager.instance.PlaySound();
             GameManager.instance.func_bolaCaePorAgujero();

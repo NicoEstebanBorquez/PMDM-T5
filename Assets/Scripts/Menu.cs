@@ -11,20 +11,28 @@ public class Menu : MonoBehaviour
     public Text txtRecord;
 
     //Variables Puntuacion Record
-   // int puntuacionRecord;
+    // int puntuacionRecord;
 
 
     void Start()
     {
-        
-       // puntuacionRecord = PlayerPrefs.GetInt("Puntuacion_Maxima");
-       // Debug.Log("Record a batir (Desde Menu): " + puntuacionRecord);
-       // txtRecord.text = "Record a batir: " + puntuacionRecord;
+
+        // puntuacionRecord = PlayerPrefs.GetInt("Puntuacion_Maxima");
+        // Debug.Log("Record a batir (Desde Menu): " + puntuacionRecord);
+        // txtRecord.text = "Record a batir: " + puntuacionRecord;
     }
     //Carga la escena "Juego":
     public void func_iniciarJuego()
     {
         SceneManager.LoadScene("Juego");
+    }
+    public void func_irCreditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+    public void func_volverMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     //Salir del juego
