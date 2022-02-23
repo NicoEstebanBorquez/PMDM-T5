@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     //Variables de Puntuacion
     int puntuacion;
-    int puntuacionMax;
+    int puntuacionRecord;
 
     //Moneda_10
     public GameObject moneda_10_1_trigger;
@@ -54,15 +54,12 @@ public class GameManager : MonoBehaviour
         //Se inicializa la puntuacion
         puntuacion = 0;
 
-        //Se carga la puntuación almacenada en PlayerPrefs
-        puntuacionMax = PlayerPrefs.GetInt("Puntuacion_Maxima");
-        Debug.Log("Puntuacion maxima: " + puntuacionMax);
+        //Se carga la puntuación almacenada en PlayerPrefs;
+        puntuacionRecord = PlayerPrefs.GetInt("Puntuacion_Maxima");
+        Debug.Log("Record a batir: " + puntuacionRecord);
 
-        //Inicializacion del texto de Victoria/Derrota
         txtVictoriaDerrota.enabled = false;
-
         BotonMenuPrincipal.SetActive(false);
-
     }
 
     // Update is called once per frame
@@ -73,30 +70,9 @@ public class GameManager : MonoBehaviour
 
     public void func_aumentarPuntuacion(int puntos)
     {
+        //Contador de la puntuación actual
         puntuacion = puntuacion + puntos;
         txtPuntuacion.text = puntuacion.ToString();
-
-        //Se almacena la puntuación máxima en PlayerPrefs
-
-        if (puntuacion > puntuacionMax)
-        {
-            puntuacionMax = puntuacion;
-            Debug.Log("NUEVA Puntuacion maxima: " + puntuacionMax);
-        }
-
-
-        //Condicion de victoria
-        if (puntuacion >= 3)
-        {
-            //gameOver.text = "VictoriA";
-
-            //Muestra el boton Menu
-            //BotonMenuPrincipal.SetActive(true);
-            //Se guarda la puntuacion maxima
-
-            PlayerPrefs.SetInt("Puntuacion_Maxima", puntuacionMax);
-            PlayerPrefs.Save();
-        }
     }
 
     //Carga la escena del Menu
@@ -106,13 +82,30 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    //Metodo que se llamará cuando cuando se produzca la condicion de derrota
-    public void func_Derrota()
+    //Metodo que se llamará cuando cuando la bola caiga por el agujero
+    public void func_bolaCaePorAgujero()
     {
-      //  txtVictoriaDerrota.text = "Game over!";
-        txtVictoriaDerrota.enabled = true;
+        /*Si cuando la bola cae por el agujero se ha batido el último Record 
+          de puntuacion, se produce una VICTORIA: */
+        if (puntuacion > puntuacionRecord)
+        {
+            //Se guarda el nuevo Record
+            PlayerPrefs.SetInt("Puntuacion_Maxima", puntuacionRecord);
+            PlayerPrefs.Save();
 
-        //Muestra el boton Menu
-        BotonMenuPrincipal.SetActive(true);
+
+            txtVictoriaDerrota.text = "WIN! " + puntuacion + " Has establecido un nuevo Record!";
+            txtVictoriaDerrota.enabled = true;
+            BotonMenuPrincipal.SetActive(true);
+        }
+
+        //Si no se ha batido el Record, se produce una DERROTA:
+        if (puntuacion <= puntuacionRecord)
+        {
+            txtVictoriaDerrota.text = "GAME OVER " + puntuacion + " No has conseguido batir el Record actual.";
+            txtVictoriaDerrota.enabled = true;
+            BotonMenuPrincipal.SetActive(true);
+        }
+
     }
 }

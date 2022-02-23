@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1470.4
     height: 820.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1470
     height: 771
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 680, y: 492}
+  m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
-  controlID: 9421
+  controlID: 5017
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 9422
+  controlID: 5018
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 9423
+  controlID: 5019
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -396,10 +396,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 92.399994}
-      m_SelectedIDs: 4a6c0000
-      m_LastClickedID: 27722
-      m_ExpandedIDs: 68dbffff36deffffdaf7ffff6cf8ffff30f9ffffc2f9ffff48fbffff4a5600006e560000645700006e5700007a5900009e5900001c5a0000265a0000686700008c670000ac6b0000b66b0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 8c460000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 22e2ffff04e3ffffcaecffff4cf9ffff64f9ffff18faffff1efaffff48fbffffe2570000ec570000926a0000b66a0000066d0000106d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 8.897296, y: -15.758177, z: -3266.0386}
+    m_Target: {x: 375.4, y: 161.8, z: 0}
     speed: 2
-    m_Value: {x: 8.232156, y: -15.886591, z: -3266.0002}
+    m_Value: {x: 375.4, y: 161.8, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -512,9 +512,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.924126
+    m_Target: 408.78406
     speed: 2
-    m_Value: 8.539833
+    m_Value: 408.78406
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -638,21 +638,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\Users\Nico\Desktop\FOC\1 - Tareas\PMDM\Unidad 5\ok\Pinball
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 44440000
-    m_LastClickedID: 17476
+    m_SelectedIDs: 3e440000
+    m_LastClickedID: 17470
     m_ExpandedIDs: 0000000036440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

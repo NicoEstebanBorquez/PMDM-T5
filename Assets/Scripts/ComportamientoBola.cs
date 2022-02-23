@@ -32,11 +32,10 @@ public class ComportamientoBola : MonoBehaviour
     {
         if (other.gameObject.name == "limite")
         {
-            Debug.Log("Tocado: LIMITE");
+            //Debug.Log("Tocado: LIMITE");
             //Sonido Game Over
             SoundManager.instance.PlaySound();
-            GameManager.instance.func_Derrota();
-            GameManager.instance.txtVictoriaDerrota.text = "Has perdido!";
+            GameManager.instance.func_bolaCaePorAgujero();
         }
         else if (other.gameObject.name == "moneda_10_1_trigger" || 
         other.gameObject.name == "moneda_10_2_trigger")
