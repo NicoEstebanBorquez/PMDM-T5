@@ -35,25 +35,25 @@ public class ComportamientoBola : MonoBehaviour
             Debug.Log("Tocado: LIMITE");
             //Sonido Game Over
             SoundManager.instance.PlaySound();
-            GameManager.instance.GameOver();
+            GameManager.instance.func_Derrota();
             GameManager.instance.txtVictoriaDerrota.text = "Has perdido!";
         }
         else if (other.gameObject.name == "moneda_10_1_trigger" || 
         other.gameObject.name == "moneda_10_2_trigger")
         {
-            GameManager.instance.aumentarPuntuacion(10);
+            GameManager.instance.func_aumentarPuntuacion(10);
             SoundManager.instance.PlaySound();
         }
         else if (other.gameObject.name == "moneda_20_trigger")
         {
-            GameManager.instance.aumentarPuntuacion(20);
+            GameManager.instance.func_aumentarPuntuacion(20);
             SoundManager.instance.PlaySound();
         }
         else if (other.gameObject.name == "moneda_30_1_trigger" ||
         other.gameObject.name == "moneda_30_2_trigger" ||
         other.gameObject.name == "moneda_30_3_trigger")
         {
-            GameManager.instance.aumentarPuntuacion(30);
+            GameManager.instance.func_aumentarPuntuacion(30);
             SoundManager.instance.PlaySound();
         }
     }

@@ -59,9 +59,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Puntuacion maxima: " + puntuacionMax);
 
         //Inicializacion del texto de Victoria/Derrota
-        //txtVictoriaDerrota.enabled = false;
+        txtVictoriaDerrota.enabled = false;
 
-       BotonMenuPrincipal.SetActive(false);
+        BotonMenuPrincipal.SetActive(false);
 
     }
 
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void aumentarPuntuacion(int puntos)
+    public void func_aumentarPuntuacion(int puntos)
     {
         puntuacion = puntuacion + puntos;
         txtPuntuacion.text = puntuacion.ToString();
@@ -100,14 +100,14 @@ public class GameManager : MonoBehaviour
     }
 
     //Carga la escena del Menu
-    public void Menu()
+    public void func_irMenu()
     {
         //Carga la escena anterior
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Menu");
     }
 
     //Metodo que se llamará cuando cuando se produzca la condicion de derrota
-    public void GameOver()
+    public void func_Derrota()
     {
       //  txtVictoriaDerrota.text = "Game over!";
         txtVictoriaDerrota.enabled = true;

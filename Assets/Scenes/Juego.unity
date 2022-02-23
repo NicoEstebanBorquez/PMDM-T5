@@ -1153,7 +1153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624982568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: -1.8, z: 0}
+  m_LocalPosition: {x: -0.2155, y: -1.8596, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1295,7 +1295,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1105105202}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: func_irMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2819,15 +2819,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtPuntuacion: {fileID: 1874283422}
-  txtVictoriaDerrota: {fileID: 0}
-  BotonMenuPrincipal: {fileID: 0}
+  txtVictoriaDerrota: {fileID: 926964978}
+  BotonMenuPrincipal: {fileID: 831185380}
   moneda_10_1_trigger: {fileID: 0}
   moneda_10_2_trigger: {fileID: 0}
-  moneda_20_trigger: {fileID: 1571771683}
+  moneda_20_trigger: {fileID: 0}
   moneda_30_1_trigger: {fileID: 0}
   moneda_30_2_trigger: {fileID: 0}
   moneda_30_3_trigger: {fileID: 0}
-  limite: {fileID: 1090890536}
+  limite: {fileID: 0}
 --- !u!4 &1569589772
 Transform:
   m_ObjectHideFlags: 0

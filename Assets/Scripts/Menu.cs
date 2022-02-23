@@ -7,13 +7,13 @@ public class Menu : MonoBehaviour
 {
     
     //Carga la escena "Juego":
-    public void PlayGame()
+    public void func_iniciarJuego()
     {
         SceneManager.LoadScene("Juego");
     }
 
     //Salir del juego
-    public void QuitGame()
+    public void func_salirJuego()
     {
         Application.Quit();
     }
