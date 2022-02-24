@@ -6,30 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-
-    //Text Record a batir
-    public Text txtRecord;
-
-    //Variables Puntuacion Record
-    // int puntuacionRecord;
-
-
-    void Start()
-    {
-
-        // puntuacionRecord = PlayerPrefs.GetInt("Puntuacion_Maxima");
-        // Debug.Log("Record a batir (Desde Menu): " + puntuacionRecord);
-        // txtRecord.text = "Record a batir: " + puntuacionRecord;
-    }
     //Carga la escena "Juego":
     public void func_iniciarJuego()
     {
         SceneManager.LoadScene("Juego");
     }
+
+    //Carga la escena "Créditos":
     public void func_irCreditos()
     {
         SceneManager.LoadScene("Creditos");
     }
+
+    //Vuelve la escena "Menu":
     public void func_volverMenu()
     {
         SceneManager.LoadScene("Menu");
