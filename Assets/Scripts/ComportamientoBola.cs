@@ -10,22 +10,16 @@ public class ComportamientoBola : MonoBehaviour
     //SpriteRenderer del bloque
     SpriteRenderer spriterBola;
 
-
     // Velocidad de la bola
     public float velocidadBola = 5;
+
     void Start()
     {
         //Se obtiene el RigidBody asociado al objeto
         rbBola = GetComponent<Rigidbody2D>();
 
-        //Se obtenemos el SpriteRenderer del bloque
+        //Se obtiene el SpriteRenderer del bloque
         spriterBola = GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,9 +28,9 @@ public class ComportamientoBola : MonoBehaviour
         {
             //Sonido Game Over
             SoundManager.instance.PlaySound();
-            GameManager.instance.func_bolaCaePorAgujero();
+            GameManager.instance.func_finJuego();
         }
-        else if (other.gameObject.name == "moneda_10_1_trigger" || 
+        else if (other.gameObject.name == "moneda_10_1_trigger" ||
         other.gameObject.name == "moneda_10_2_trigger")
         {
             GameManager.instance.func_aumentarPuntuacion(10);
